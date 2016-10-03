@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  decision_block_id: 
+  choice_value: false
+  timeline_id: 
+
+two:
+  decision_block_id: 
+  choice_value: false
+  timeline_id: 
