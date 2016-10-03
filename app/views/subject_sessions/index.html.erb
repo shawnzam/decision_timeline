@@ -1,0 +1,27 @@
+<h1>Listing subject_sessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Timeline</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subject_sessions.each do |subject_session| %>
+      <tr>
+        <td><%= subject_session.timeline %></td>
+        <td><%= subject_session.title %></td>
+        <td><%= link_to 'Show', subject_session %></td>
+        <td><%= link_to 'Edit', edit_subject_session_path(subject_session) %></td>
+        <td><%= link_to 'Destroy', subject_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject session', new_subject_session_path %>

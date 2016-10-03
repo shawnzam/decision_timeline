@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Timeline:</strong>
+  <%= @subject_session.timeline %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @subject_session.title %>
+</p>
+
+<%= link_to 'Edit', edit_subject_session_path(@subject_session) %> |
+<%= link_to 'Back', subject_sessions_path %>

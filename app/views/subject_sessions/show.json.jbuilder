@@ -1,0 +1,1 @@
+json.partial! "subject_sessions/subject_session", subject_session: @subject_session
