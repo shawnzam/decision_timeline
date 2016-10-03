@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  decision_text: MyText
+  value: 1
+  timeline_id: 
+  ordering: 1
+  type: 
+
+two:
+  decision_text: MyText
+  value: 1
+  timeline_id: 
+  ordering: 1
+  type: 
