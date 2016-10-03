@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :subjects
+
   resources :subject_sessions
 
   resources :decision_blocks
