@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Decision block:</strong>
+  <%= @subject_decision.decision_block %>
+</p>
+
+<p>
+  <strong>Choice value:</strong>
+  <%= @subject_decision.choice_value %>
+</p>
+
+<p>
+  <strong>Timeline:</strong>
+  <%= @subject_decision.timeline %>
+</p>
+
+<%= link_to 'Edit', edit_subject_decision_path(@subject_decision) %> |
+<%= link_to 'Back', subject_decisions_path %>

@@ -1,0 +1,29 @@
+<h1>Listing subject_decisions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Decision block</th>
+      <th>Choice value</th>
+      <th>Timeline</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subject_decisions.each do |subject_decision| %>
+      <tr>
+        <td><%= subject_decision.decision_block %></td>
+        <td><%= subject_decision.choice_value %></td>
+        <td><%= subject_decision.timeline %></td>
+        <td><%= link_to 'Show', subject_decision %></td>
+        <td><%= link_to 'Edit', edit_subject_decision_path(subject_decision) %></td>
+        <td><%= link_to 'Destroy', subject_decision, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject decision', new_subject_decision_path %>
