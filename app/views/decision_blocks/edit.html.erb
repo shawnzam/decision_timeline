@@ -1,6 +1,5 @@
-<h1>Editing decision_block</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @decision_block %> |
-<%= link_to 'Back', decision_blocks_path %>
+<%- model_class = DecisionBlock -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => DecisionBlock %></h1>
+</div>
+<%= render :partial => 'form' %>

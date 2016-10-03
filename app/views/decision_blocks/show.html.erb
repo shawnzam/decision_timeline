@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = DecisionBlock -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => DecisionBlock %></h1>
+</div>
 
-<p>
-  <strong>Decision text:</strong>
-  <%= @decision_block.decision_text %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:decision_text) %></dt>
+      <dd><pre class="prettyprint"><%= @decision_block.decision_text %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:value) %></dt>
+      <dd><pre class="prettyprint"><%= @decision_block.value %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ordering) %></dt>
+      <dd><pre class="prettyprint"><%= @decision_block.ordering %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:type) %></dt>
+      <dd><pre class="prettyprint"><%= @decision_block.type %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Value:</strong>
-  <%= @decision_block.value %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              decision_blocks_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_decision_block_path(@decision_block), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              decision_block_path(@decision_block),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Timeline:</strong>
-  <%= @decision_block.timeline %>
-</p>
-
-<p>
-  <strong>Ordering:</strong>
-  <%= @decision_block.ordering %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @decision_block.type %>
-</p>
-
-<%= link_to 'Edit', edit_decision_block_path(@decision_block) %> |
-<%= link_to 'Back', decision_blocks_path %>
