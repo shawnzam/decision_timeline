@@ -1,25 +1,16 @@
-<%= form_for(@subject_session) do |f| %>
-  <% if @subject_session.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@subject_session.errors.count, "error") %> prohibited this subject_session from being saved:</h2>
-
-      <ul>
-      <% @subject_session.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @subject_session, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
     </div>
-  <% end %>
+  </div>
 
-  <div class="field">
-    <%= f.label :timeline_id %><br>
-    <%= f.text_field :timeline_id %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  subject_sessions_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
