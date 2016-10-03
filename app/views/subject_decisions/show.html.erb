@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = SubjectDecisions -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => SubjectDecisions %></h1>
+</div>
 
-<p>
-  <strong>Decision block:</strong>
-  <%= @subject_decision.decision_block %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:choice_value) %></dt>
+      <dd><pre class="prettyprint"><%= @subject_decisions.choice_value %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Choice value:</strong>
-  <%= @subject_decision.choice_value %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              subject_decisions_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_subject_decisions_path(@subject_decisions), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              subject_decisions_path(@subject_decisions),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Timeline:</strong>
-  <%= @subject_decision.timeline %>
-</p>
-
-<%= link_to 'Edit', edit_subject_decision_path(@subject_decision) %> |
-<%= link_to 'Back', subject_decisions_path %>

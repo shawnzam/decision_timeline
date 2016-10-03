@@ -1,6 +1,5 @@
-<h1>Editing subject_decision</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @subject_decision %> |
-<%= link_to 'Back', subject_decisions_path %>
+<%- model_class = SubjectDecisions -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => SubjectDecisions %></h1>
+</div>
+<%= render :partial => 'form' %>
