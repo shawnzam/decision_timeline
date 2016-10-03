@@ -1,0 +1,1 @@
+json.array! @decision_blocks, partial: 'decision_blocks/decision_block', as: :decision_block

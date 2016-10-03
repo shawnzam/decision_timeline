@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :decision_blocks
+
   resources :subject_decisions
 
   resources :timelines

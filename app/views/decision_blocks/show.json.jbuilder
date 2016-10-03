@@ -1,0 +1,1 @@
+json.partial! "decision_blocks/decision_block", decision_block: @decision_block

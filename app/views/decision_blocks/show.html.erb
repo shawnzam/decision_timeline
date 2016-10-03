@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Decision text:</strong>
+  <%= @decision_block.decision_text %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @decision_block.value %>
+</p>
+
+<p>
+  <strong>Timeline:</strong>
+  <%= @decision_block.timeline %>
+</p>
+
+<p>
+  <strong>Ordering:</strong>
+  <%= @decision_block.ordering %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @decision_block.type %>
+</p>
+
+<%= link_to 'Edit', edit_decision_block_path(@decision_block) %> |
+<%= link_to 'Back', decision_blocks_path %>

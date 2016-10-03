@@ -1,0 +1,33 @@
+<h1>Listing decision_blocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Decision text</th>
+      <th>Value</th>
+      <th>Timeline</th>
+      <th>Ordering</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @decision_blocks.each do |decision_block| %>
+      <tr>
+        <td><%= decision_block.decision_text %></td>
+        <td><%= decision_block.value %></td>
+        <td><%= decision_block.timeline %></td>
+        <td><%= decision_block.ordering %></td>
+        <td><%= decision_block.type %></td>
+        <td><%= link_to 'Show', decision_block %></td>
+        <td><%= link_to 'Edit', edit_decision_block_path(decision_block) %></td>
+        <td><%= link_to 'Destroy', decision_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Decision block', new_decision_block_path %>
